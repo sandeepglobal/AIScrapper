@@ -2,7 +2,7 @@ selenium
 webdriver_manager
 pandas
 numpy
-streamlit
+streamlit>=1.23.0
 scikit-learn
 selenium
 bs4
