@@ -1,5 +1,17 @@
 import streamlit as st
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+from webdriver_manager.chrome import ChromeDriverManager
+from bs4 import BeautifulSoup
+import pandas as pd
 import time
+import urllib.parse
+
+
 def scrape_booking(destination, checkin, checkout, adults=2, pages=1):
     """
     destination : e.g. "Dubai"
@@ -260,4 +272,5 @@ if run_button:
     #     mime="text/csv"
     #  )
     
+
 
