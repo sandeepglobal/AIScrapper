@@ -1,3 +1,5 @@
+selenium
+webdriver_manager
 pandas
 numpy
 streamlit
@@ -7,4 +9,4 @@ bs4
 langchain
 langchain-openai
 langsmith
-webdriver_manager
+
