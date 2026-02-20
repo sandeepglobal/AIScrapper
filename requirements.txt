@@ -1,1 +1,10 @@
-
+pandas
+numpy
+streamlit
+scikit-learn
+selenium
+bs4
+langchain
+langchain-openai
+langsmith
+webdriver_manager
