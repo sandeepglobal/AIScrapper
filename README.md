@@ -1,0 +1,2 @@
+# AIScrapper
+AI Hotel Scrapper
