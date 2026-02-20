@@ -36,7 +36,7 @@ def scrape_booking(destination, checkin, checkout, adults=2, pages=1):
     options = webdriver.ChromeOptions()
     options.add_argument("--start-maximized")
     options.add_argument("--disable-blink-features=AutomationControlled")
-     options.add_argument("--no-sandbox")
+    options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
     driver = webdriver.Chrome(service=service, options=options)
@@ -274,6 +274,7 @@ if run_button:
     #     mime="text/csv"
     #  )
     
+
 
 
 
