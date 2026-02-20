@@ -42,7 +42,10 @@ def scrape_booking(destination, checkin, checkout, adults=2, pages=1):
     options.add_argument("--disable-dev-shm-usage")
     #options.add_argument("--disable-gpu") # Extra stability for cloud
     driver = webdriver.Chrome(service=service, options=options)
-    wait = WebDriverWait(driver, 15)
+    #wait = WebDriverWait(driver, 15)
+    wait = WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.ID, "content-id"))
+)
 
     driver.get(url)
     time.sleep(5)
@@ -276,6 +279,7 @@ if run_button:
     #     mime="text/csv"
     #  )
     
+
 
 
 
