@@ -36,12 +36,10 @@ def scrape_booking(destination, checkin, checkout, adults=2, pages=1):
     service = Service(ChromeDriverManager().install())
     options = webdriver.ChromeOptions()
     options.add_argument("--headless") 
-    options.add_argument("--no-sandbox") 
-    options.add_argument("--disable-dev-shm-usage") 
-
-    # Optional but recommended for stability
-    options.add_argument("--disable-gpu")
-    options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("--start-maximized")
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
     driver = webdriver.Chrome(service=service, options=options)
     wait = WebDriverWait(driver, 15)
 
@@ -277,5 +275,6 @@ if run_button:
     #     mime="text/csv"
     #  )
     
+
 
 
